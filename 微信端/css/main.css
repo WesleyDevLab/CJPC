@@ -1,0 +1,446 @@
+@CHARSET "UTF-8";
+
+/*网站全部共通*/
+
+body{
+	font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+	color: #333;
+}
+
+ul,li,div,dl,dt,a,img,span,h2,h1{
+	list-style: none; 
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+
+table,table td{
+	width: 100%;
+	height: 100%;
+	border:0;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	vertical-align: middle;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  -webkit-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+}
+
+.error{
+	color: #FF0000;
+}
+
+/*header共通*/
+
+.header_style_one{
+	width: 100%;
+	height: 88px;
+	position: relative;
+}
+
+.header_style_one .header_title{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	text-align: center;
+	line-height: 88px;
+	font-size: 34px;
+	background-color: #F3F3F3;
+}
+
+.header_style_one .header_login_infor{
+	position: absolute;
+	width: 22px;
+	height: 28px;
+	top: 30px;
+	right: 20px;
+}
+
+.header_style_one .header_login_infor a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.header_style_one .header_login_link{
+	position: absolute;
+	top: 30px;
+	right: 20px;
+}
+
+.header_style_one .header_login_link a{
+	display: block;
+	overflow: hidden;
+	font-size: 24px;
+	color: #CCC;
+}
+
+
+.header_style_bg_color_one,
+.header_style_bg_color_one .header_title{
+  background-color: #FCAF23 !important;
+  color: #FFF !important;
+  text-shadow: initial !important;
+}
+
+
+/*
+	表单共通
+*/
+
+.form_style{
+	padding: 26px 70px 0;
+}
+
+.form_style .form_row{
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 1px #CCC solid;
+	padding: 40px 0 0;
+	position: relative;
+}
+
+.form_style .form_row:last-child{
+	margin: 0;
+}
+
+.form_style .form_row .form_icon{
+	width: 19px;
+	height: 32px;
+	margin: 0 40px 10px 0;
+	float: left;
+}
+
+.form_style .form_row .form_input{
+	float: left;
+}
+
+.form_style .form_row .width_90{
+	width: 90%;
+}
+
+.form_style .form_row .form_input .ui-input-text{
+	border:0;
+	margin: 0;
+}
+
+.form_style .form_row .form_input .ui-input-text input{
+	background: inherit;
+	height: 35px;
+	line-height: normal;
+	font-size: 17px;
+}
+
+.form_style .form_row .form_input .ui-input-text input::-webkit-input-placeholder {
+	color: #CCC;
+	font-size: 28px;
+	line-height: 35px;
+	padding: 0.4em 0 0 0;
+}
+.form_style .form_row .form_input .ui-input-text input:-moz-placeholder {
+  color: #CCC;
+	font-size: 28px;
+	line-height: 35px;
+	padding: 0.4em 0 0 0;
+}
+.form_style .form_row .form_input .ui-input-text input::-moz-placeholder {
+  color: #CCC;
+	font-size: 28px;
+	line-height: 35px;
+	padding: 0.4em 0 0 0;
+}
+.form_style .form_row .form_input .ui-input-text input:-ms-input-placeholder {
+  color: #CCC;
+	font-size: 28px;
+	line-height: 35px;
+	padding: 0.4em 0 0 0;
+}
+
+.form_style .form_row .form_input .ui-shadow-inset{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.form_style .form_row .form_input .code_btn{
+	display: block;
+	position: absolute;
+	width: 125px;
+	height: 48px;
+	right: 0;
+	bottom: 5px;
+	background-color: #CCC;
+	color: #FFF;
+	font-size: 24px;
+	line-height: 48px;
+	text-align: center;
+}
+
+.form_style .form_row_action{
+	overflow: hidden;
+	margin: 20px 0 0 0;
+	padding: 10px 0 0 0;
+}
+
+.form_style .form_row_action .form_input_chk{
+	width: 22px;
+	height: 22px;
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+.form_style .form_row_action .form_input_chk .ui-checkbox{
+	margin: 0;
+}
+
+.form_style .form_row_action .form_input_chk .ui-checkbox input{
+	position: static;
+	margin: 0;
+}
+
+.form_style .form_row_action .form_action{
+	float: left;
+	font-size: 24px;
+	color: #000;
+	line-height: 20px;
+}
+
+.form_style .form_row_action .form_action a{
+	color: #F3961A;
+}
+
+.form_style .form_submit a,
+.form_style .form_submit button{
+	display: block;
+	width: 400px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	border:1px #CCC solid;
+	border-radius: 16px;
+	font-size: 28px;
+	color: #CCC;
+	margin: 60px auto 0;
+	cursor: pointer;
+}
+
+.form_style .form_submit a.undisable,
+.form_style .form_submit button.undisable{
+	background-color: #FCAF23;
+  color: #FFF;
+  cursor: pointer;
+}
+
+/*
+	index.html
+*/
+
+.index_container{
+	width: 100%;
+}
+
+.index_container .cantainer_ln1{
+	width: 100%;
+	background-color: #FFF;
+	position: relative;
+	overflow: hidden;
+	padding: 10px 0px;
+}
+
+.index_container .cantainer_ln1 .ln1_read{
+	float: left;
+	margin: 0 0 0 20px;
+	font-size: 26px;
+}
+
+.index_container .cantainer_ln1 .ln1_position{
+	float: left;
+	font-size: 26px;
+	margin: 0 0 0 20px;
+}
+
+.index_container .cantainer_ln1 .ln1_confirm_btn{
+	float: right;
+	margin: 0 20px 0 0;
+}
+.index_container .cantainer_ln1 .ln1_confirm_btn a{
+	display: block;
+	width: 90px;
+	height: 40px;
+	background-color: #FCAF23;
+	color: #FFF;
+	border-radius: 6px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+}
+
+.index_container .cantainer_ln2{
+	padding: 20px 20px 0;
+}
+
+.index_container .cantainer_ln2 .ln2_item{
+	width: 100%;
+	padding: 0 0 20px 0;
+}
+
+.index_container .cantainer_ln2 .ln2_item .ln2_item_title{
+	font-size: 28px;
+	margin: 0 0 20px 0;
+}
+
+.index_container .cantainer_ln2 .ln2_item .ln2_item_content{
+	width: 100%;
+}
+
+.index_container .cantainer_ln2 .ln2_item .ln2_item_content ul{
+	width: 100%;
+	overflow: hidden;
+}
+
+.index_container .cantainer_ln2 .ln2_item .ln2_item_content ul li{
+	float: left;
+	margin: 0 40px 20px 0px;
+}
+
+.index_container .cantainer_ln2 .ln2_item .ln2_item_content ul li a{
+	display: block;
+	width: 120px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	border-radius: 10px;
+	border:1px #CCC solid;
+	color: #333;
+	font-size: 28px;
+}
+
+/*
+	road_confirm.html
+*/
+
+.road_confirm_cantainer{
+	width: 100%;
+	padding: 10px 0 0 0;
+}
+
+.road_confirm_cantainer .cantainer_item{
+	margin: 0 20px;
+	height: 120px;
+	line-height: 120px;
+	text-align: center;
+	background-color: #FFF;
+	font-size: 34px;
+	margin: 0 0 9px;
+}
+
+.road_confirm_cantainer .cantainer_item a{
+	display: block;
+	color: #333;
+}
+
+.road_confirm_cantainer .cantainer_item div{
+	display: inline-block;
+}
+
+.road_confirm_cantainer .cantainer_item div.clear_icon img{
+	vertical-align: middle;
+}
+
+/*
+	change_position.html
+*/
+
+/*
+	city_select.html
+*/
+.city_select_cantainer{
+	width: 100%;
+}
+
+.city_select_cantainer a.ui-btn{
+  font-size: 28px;
+  font-weight: normal;
+  padding: 20px 0 20px 20px;
+  text-align: left;
+  line-height: normal;
+  border-color: #CCC !important;
+  border-top-width: 0px;
+  border-bottom-width: 1px !important;
+  font-family: inherit;
+  background: #FFF;
+}
+
+/*
+	resgiter.html
+*/
+
+.resgiter_cantainer{
+	width: 100%;
+	background-color: #FFF;
+}
+
+/*
+	login.html
+*/
+
+.login_cantainer{
+	width: 100%;
+	background-color: #FFF;
+	padding: 167px 0 100px 0 ;
+}
+
+.login_cantainer .login_logo{
+	width: 145px;
+	height: 145px;
+	margin: 0px auto 167px;
+}
+
+.login_cantainer .form_style{
+	padding: 26px 120px 0;
+}
+
+.login_cantainer .releate_link{
+	width: 400px;
+	margin: 30px auto 0;
+}
+
+.login_cantainer .releate_link a{
+	display: block;
+	font-size: 24px;
+	color: #CCC;
+}
+
+.login_cantainer .releate_link a.forget_password{
+	float: left;
+}
+
+.login_cantainer .releate_link a.resgiter{
+	float: right;
+	color: #FF9000;
+}
+
+
