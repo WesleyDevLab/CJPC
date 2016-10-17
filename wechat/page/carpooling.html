@@ -4,37 +4,110 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>城际拼车</title>
-  <link rel="stylesheet" type="text/css" href="../css/sui/sm.min.css" />
-  <link rel="stylesheet" type="text/css" href="../css/sui/sm-extend.min.css" />
-  <link rel="stylesheet" type="text/css" href="../js/jquery.mobile/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+  <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/??sm.min.css,sm-extend.min.css">
   <link rel="stylesheet" type="text/css" href="../css/main.css" />
 </head>
 <body>
-  <div data-role="page" class="">
-    <div data-role="header" class="header_style_one">
-      <div class="header_title_style_one">
-        <div class="header_back">
-          <a href="#">
-            <img src="../images/common/header_back@2x.png">
-          </a>
-        </div>
-        <div class="header_title">
-          <div class="title_start">长沙</div>
-          <div class="title_spec">
-            <img src="../images/common/title_spec@2x.png">
+	<div class="page-group">
+    <div class="page">
+		  <div class="content">
+		  	<div class="carpooling_cantainer">
+			  	<div class="list-block">
+				    <ul>
+				      <li>
+				        <div class="item-content">
+				          <div class="item-media"><i class="icon icon-form-name"></i></div>
+				          <div class="item-inner">
+				            <div class="item-title label">出发时间</div>
+				            <div class="item-input">
+				              <input type="text" id="start_time">
+				            </div>
+				            <div class="item-icon">
+				            	<img src="../images/common/item-icon.png">
+				            </div>
+				          </div>
+				        </div>
+				      </li>
+				      <li>
+				        <div class="item-content">
+				          <div class="item-media"><i class="icon icon-form-name"></i></div>
+				          <div class="item-inner">
+				            <div class="item-title label">出发地点</div>
+				            <div class="item-input">
+				              <input type="text">
+				            </div>
+				            <div class="item-icon">
+				            	<img src="../images/common/item-icon.png">
+				            </div>
+				          </div>
+				        </div>
+				      </li>
+				      <li>
+				        <div class="item-content">
+				          <div class="item-media"><i class="icon icon-form-name"></i></div>
+				          <div class="item-inner">
+				            <div class="item-title label">下车地点</div>
+				            <div class="item-input">
+				              <input type="text">
+				            </div>
+				            <div class="item-icon">
+				            	<img src="../images/common/item-icon.png">
+				            </div>
+				          </div>
+				        </div>
+				      </li>
+				    </ul>
+				  </div>
+
+				  <div class="people_number">
+				  	<div class="content-block">
+			  			<a href="#" class="button" data-people="1" data-money="180"><span class="btn_size_1">包车</span><span class="btn_size_2">180元</span></a>
+					    <a href="#" class="button" data-people="2" data-money="90"><span class="btn_size_1">2人包车</span><span class="btn_size_2">90元/人</span></a>
+					    <a href="#" class="button" data-people="3" data-money="60"><span class="btn_size_1">3人包车</span><span class="btn_size_2">60元/人</span></a>
+					    <a href="#" class="button" data-people="4" data-money="50"><span class="btn_size_1">4人包车</span><span class="btn_size_2">50元/人</span></a>	
+					    
+					  </div>
+				  </div>
+
+				  <div class="list-block">
+				    <ul>
+				      <li>
+				        <div class="item-content">
+				          <div class="item-media"><i class="icon icon-form-name"></i></div>
+				          <div class="item-inner">
+				            <div class="item-title label">四人包车</div>
+				            <div class="item-input width_1">
+				              <input type="text" value="" id="total_money">
+				              <input type="hidden" name="single_money" id="single_money">
+				            </div>
+				            <div class="item-icon">
+											<img src="../images/common/minu.png" onclick="minu_number('#people_number' , '#total_money')">
+				            </div>
+				            <div class="item-input width_2">
+				              <input type="text" value="" id="people_number">
+				            </div>
+				            <div class="item-icon">
+				            	<img src="../images/common/plus.png" onclick="add_number('#people_number' , '#total_money')">
+				            </div>
+				          </div>
+				        </div>
+				      </li>
+				    </ul>
+				  </div>
+
+				  <div class="form_submit">
+            <a href="#" class="button button-light">我要拼车</a>
           </div>
-          <div class="title_end">湘潭</div>
-        </div>
-      </div>
-    </div>
-    <div data-role="main" class="carpooling_cantainer">
+			  </div>
+		  </div>
     </div>
   </div>
-  <script type="text/javascript" src="../js/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.validate/jquery.validate.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.validate/additional-methods.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.form.min.js"></script>
-  <script type="text/javascript" src="../js/main.js"></script>
+
+  <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/??sm.min.js,sm-extend.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='../js/util.js' charset='utf-8'></script>
+	<script type='text/javascript' src='../js/main.js' charset='utf-8'></script>
 </body>
 </html>

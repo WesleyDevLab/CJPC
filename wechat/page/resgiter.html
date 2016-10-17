@@ -3,51 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>城际拼车</title>
-  <link rel="stylesheet" type="text/css" href="../js/jquery.mobile/jquery.mobile-1.4.5.min.css">
+  <title>注册</title>
+  <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+  <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/??sm.min.css,sm-extend.min.css">
   <link rel="stylesheet" type="text/css" href="../css/main.css" />
 </head>
 <body>
-  <div data-role="page" class="">
-    <div data-role="header" class="header_style_one">
-      <div class="header_title">注册</div>
-      <div class="header_login_link">
-        <a href="login.html">登陆</a>
-      </div>
-    </div>
-    <div data-role="main" class="resgiter_cantainer">
-      <div class="form_style">
-        <form method="post" action="" id="resgiter_form">
-          <div class="form_row">
-            <div class="form_icon">
-              <label for="user_name">
-                <img src="../images/common/telephone@2x.png">
-              </label>
-            </div>
-            <div class="form_input width_90">
-              <input type="text" name="user_name" id="user_name" value="" placeholder="请输入手机号">
-            </div>
-          </div>
-          <div class="form_row">
-            <div class="form_icon">
-              <label for="code">
-                <img src="../images/common/password@2x.png">
-              </label>
-            </div>
-            <div class="form_input width_90">
-              <input type="text" name="code" id="code" value="" placeholder="请输入验证码">
-              <a href="#" class="code_btn">获取验证码</a>
-            </div>
-          </div>
-          <div class="form_row">
-            <div class="form_icon">
-              <label for="password">
-                <img src="../images/common/password@2x.png">
-              </label>
-            </div>
-            <div class="form_input width_90">
-              <input type="password" name="password" id="password" value="" autocomplete="off" placeholder="请输入密码">
-            </div>
+  <div class="page-group">
+    <div class="page">
+      <!--
+      <header class="bar bar-nav header_style_one">
+        <a class="button button-link button-nav pull-right header_login_link" href="login.html" data-transition='slide-out'>登陆</a>
+        <div class="header_title">注册</div>
+      </header>
+      -->
+      <div class="content">
+        <div class="resgiter_cantainer">
+          <div class="list-block">
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-media"><i class="icon icon-form-name"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title label">
+                      <img src="../images/common/telephone.png">
+                    </div>
+                    <div class="item-input">
+                      <input type="text" placeholder="请输入手机号">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-media"><i class="icon icon-form-name"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title label">
+                      <img src="../images/common/password.png">
+                    </div>
+                    <div class="item-input">
+                      <input type="text" placeholder="请输入验证码">
+                    </div>
+
+                    <div class="item-icon">
+                      <a href="#" class="code_btn">获取验证码</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-media"><i class="icon icon-form-name"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title label">
+                      <img src="../images/common/password.png">
+                    </div>
+                    <div class="item-input">
+                      <input type="text" placeholder="请输入密码">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+              </li>
+            </ul>
           </div>
           <div class="form_row_action">
             <div class="form_input_chk">
@@ -55,18 +74,69 @@
             </div>
             <div class="form_action">我已阅读并同意<a href="#">《用户协议》</a></div>
           </div>
+
           <div class="form_submit">
-            <a class="">注册</a>
+            <a href="#" class="button button-light">注册</a>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="../js/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.validate/jquery.validate.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.validate/additional-methods.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.form.min.js"></script>
-  <script type="text/javascript" src="../js/main.js"></script>
+  <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+  <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+  <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/??sm.min.js,sm-extend.min.js' charset='utf-8'></script>
+  <script type='text/javascript' src='../js/util.js' charset='utf-8'></script>
+  <script type='text/javascript' src='../js/main.js' charset='utf-8'></script>
+  <script>
+    $(function() {
+      //
+      $(".form_submit").on("click",function(){
+        $.ajax({
+          type : "post",
+          url : "/CJPC/index/register.do",
+          data : $('#resgiter_form').serialize(),
+          dataType : "json",
+          success : function(data) {
+            if (data.resultObject.error) {
+              alert(data.resultObject.error);
+              return;
+            }
+            window.location.href = data.resultObject.url;
+          }
+        });
+      });
+      
+      $(".code_btn").on("click", function() {
+        if (!$(".code_btn").attr("disabled")) {
+          var count = 60;
+          $(".code_btn").attr("disabled", true);
+          var counter = setInterval(function() {
+            $(".code_btn").html(--count + "s后重新发送");
+            if (count == 0) {
+              clearInterval(counter);
+              $(".code_btn").attr("disabled", false);
+              $(".code_btn").html("获取验证码");
+            }
+          }, 1000);
+          $.ajax({
+            type : "post",
+            url : "/CJPC/index/getAppMobileCode.do",
+            data : $('#resgiter_form').serialize(),
+            dataType : "json",
+            success : function(data) {
+              console.log(data);
+              if (data.resultObject.error) {
+                alert(data.resultObject.error);
+                return;
+              }
+              alert("短信发送成功,请耐心等待");
+            }
+          });
+
+        }
+
+      });
+    })
+  </script>
 </body>
 </html>

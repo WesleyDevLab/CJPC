@@ -3,8 +3,9 @@
 /*网站全部共通*/
 
 body{
-	font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
 	color: #333;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
 }
 
 ul,li,div,dl,dt,a,img,span,h2,h1{
@@ -18,7 +19,7 @@ input,
 button,
 select,
 textarea {
-  font-family: inherit;
+  font-family: "Microsoft YaHei";
   font-size: inherit;
   line-height: inherit;
   outline: none;
@@ -46,8 +47,21 @@ a{
   transition: all 300ms linear 0ms;
 }
 
+img {
+	display: block;
+	vertical-align: middle;
+}
+
 .error{
 	color: #FF0000;
+}
+
+.bar-nav~.content{
+	top: 88px;
+}
+
+.list-block{
+	margin: 0px;
 }
 
 /*header共通*/
@@ -55,7 +69,6 @@ a{
 .header_style_one{
 	width: 100%;
 	height: 88px;
-	position: relative;
 }
 
 .header_style_one .header_title{
@@ -70,34 +83,38 @@ a{
 	background-color: #F3F3F3;
 }
 
+.header_style_one .header_title div{
+	display: inline-block;
+}
+
+.header_style_one .header_title div.title_spec img{
+	vertical-align: middle;
+}
+
+.header_style_one .header_back{
+	width: 16px;
+	height: 30px;
+	top: 29px;
+	left: 20px;
+}
+
+
 .header_style_one .header_login_infor{
-	position: absolute;
 	width: 22px;
 	height: 28px;
 	top: 30px;
 	right: 20px;
 }
 
-.header_style_one .header_login_infor a{
-	display: block;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-
 .header_style_one .header_login_link{
-	position: absolute;
 	top: 30px;
 	right: 20px;
-}
-
-.header_style_one .header_login_link a{
-	display: block;
 	overflow: hidden;
 	font-size: 24px;
 	color: #CCC;
+	height: auto;
+	line-height: normal;
 }
-
 
 .header_style_bg_color_one,
 .header_style_bg_color_one .header_title{
@@ -107,133 +124,69 @@ a{
 }
 
 
+
 /*
 	表单共通
 */
 
-.form_style{
-	padding: 26px 70px 0;
+.list-block .item-title.label{
+	width: 5%;
 }
 
-.form_style .form_row{
-	width: 100%;
-	overflow: hidden;
-	border-bottom: 1px #CCC solid;
-	padding: 40px 0 0;
-	position: relative;
+.list-block ul:before,
+.list-block ul:after{
+	height: 0px;
 }
 
-.form_style .form_row:last-child{
-	margin: 0;
+.list-block .item-content{
+	padding: 0 120px;
 }
 
-.form_style .form_row .form_icon{
-	width: 19px;
-	height: 32px;
-	margin: 0 40px 10px 0;
-	float: left;
+.list-block .item-media+.item-inner{
+	margin-left: 0px;
 }
 
-.form_style .form_row .form_input{
-	float: left;
-}
 
-.form_style .form_row .width_90{
-	width: 90%;
-}
-
-.form_style .form_row .form_input .ui-input-text{
-	border:0;
-	margin: 0;
-}
-
-.form_style .form_row .form_input .ui-input-text input{
-	background: inherit;
-	height: 35px;
-	line-height: normal;
-	font-size: 17px;
-}
-
-.form_style .form_row .form_input .ui-input-text input::-webkit-input-placeholder {
-	color: #CCC;
-	font-size: 28px;
-	line-height: 35px;
-	padding: 0.4em 0 0 0;
-}
-.form_style .form_row .form_input .ui-input-text input:-moz-placeholder {
-  color: #CCC;
-	font-size: 28px;
-	line-height: 35px;
-	padding: 0.4em 0 0 0;
-}
-.form_style .form_row .form_input .ui-input-text input::-moz-placeholder {
-  color: #CCC;
-	font-size: 28px;
-	line-height: 35px;
-	padding: 0.4em 0 0 0;
-}
-.form_style .form_row .form_input .ui-input-text input:-ms-input-placeholder {
-  color: #CCC;
-	font-size: 28px;
-	line-height: 35px;
-	padding: 0.4em 0 0 0;
-}
-
-.form_style .form_row .form_input .ui-shadow-inset{
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-
-.form_style .form_row .form_input .code_btn{
-	display: block;
-	position: absolute;
-	width: 125px;
-	height: 48px;
-	right: 0;
-	bottom: 5px;
-	background-color: #CCC;
-	color: #FFF;
-	font-size: 24px;
-	line-height: 48px;
-	text-align: center;
-}
-
-.form_style .form_row_action{
+.form_row_action{
 	overflow: hidden;
 	margin: 20px 0 0 0;
-	padding: 10px 0 0 0;
+	padding: 10px 70px 0;
 }
 
-.form_style .form_row_action .form_input_chk{
+.form_row_action .form_input_chk{
 	width: 22px;
 	height: 22px;
 	float: left;
-	margin: 0 20px 0 0;
+	margin: 5px 20px 0 0;
 }
 
-.form_style .form_row_action .form_input_chk .ui-checkbox{
+.form_row_action .form_input_chk input{
+	width: 100%;
+	height: 100%;
+}
+
+.form_row_action .form_input_chk .ui-checkbox{
 	margin: 0;
 }
 
-.form_style .form_row_action .form_input_chk .ui-checkbox input{
+.form_row_action .form_input_chk .ui-checkbox input{
 	position: static;
 	margin: 0;
 }
 
-.form_style .form_row_action .form_action{
+.form_row_action .form_action{
 	float: left;
 	font-size: 24px;
 	color: #000;
-	line-height: 20px;
 }
 
-.form_style .form_row_action .form_action a{
+.form_row_action .form_action a{
 	color: #F3961A;
 }
 
-.form_style .form_submit a,
-.form_style .form_submit button{
+
+.form_submit a,
+.form_submit button{
 	display: block;
 	width: 400px;
 	height: 60px;
@@ -247,12 +200,14 @@ a{
 	cursor: pointer;
 }
 
-.form_style .form_submit a.undisable,
-.form_style .form_submit button.undisable{
+.form_submit a.undisable,
+.form_submit button.undisable{
 	background-color: #FCAF23;
   color: #FFF;
   cursor: pointer;
 }
+
+
 
 /*
 	index.html
@@ -348,13 +303,16 @@ a{
 }
 
 .road_confirm_cantainer .cantainer_item{
-	margin: 0 20px;
+	margin: 0 20px 9px;
 	height: 120px;
 	line-height: 120px;
 	text-align: center;
 	background-color: #FFF;
 	font-size: 34px;
-	margin: 0 0 9px;
+	border-radius: 10px;
+	-webkit-box-shadow:0 0 1px rgba(0, 0, 0, .5);
+  -moz-box-shadow:0 0 1px rgba(0, 0, 0, .5);
+  box-shadow:0 0 1px rgba(0, 0, 0, .5);
 }
 
 .road_confirm_cantainer .cantainer_item a{
@@ -377,30 +335,40 @@ a{
 /*
 	city_select.html
 */
-.city_select_cantainer{
-	width: 100%;
-}
-
-.city_select_cantainer a.ui-btn{
-  font-size: 28px;
+.city_select_cantainer .list-block .item-link.list-button{
+	font-size: 28px;
+	padding: 20px 0 20px 20px;
   font-weight: normal;
-  padding: 20px 0 20px 20px;
   text-align: left;
   line-height: normal;
-  border-color: #CCC !important;
-  border-top-width: 0px;
-  border-bottom-width: 1px !important;
-  font-family: inherit;
   background: #FFF;
+  color: #333;
 }
 
 /*
 	resgiter.html
 */
-
 .resgiter_cantainer{
-	width: 100%;
 	background-color: #FFF;
+}
+
+.resgiter_cantainer .list-block .item-content{
+	padding: 0 70px;
+}
+
+
+.code_btn{
+	display: block;
+	position: absolute;
+	width: 125px;
+	height: 48px;
+	right: 0;
+	bottom: 5px;
+	background-color: #CCC;
+	color: #FFF;
+	font-size: 24px;
+	line-height: 48px;
+	text-align: center;
 }
 
 /*
@@ -417,10 +385,6 @@ a{
 	width: 145px;
 	height: 145px;
 	margin: 0px auto 167px;
-}
-
-.login_cantainer .form_style{
-	padding: 26px 120px 0;
 }
 
 .login_cantainer .releate_link{
@@ -443,4 +407,213 @@ a{
 	color: #FF9000;
 }
 
+/*
+	system_message.html
+*/
 
+.system_message_cantainer{
+	width: 100%;
+	background-color: #FFF;
+}
+
+.system_message_cantainer .cantainer_item{
+	padding: 0 20px;
+	overflow: hidden;
+	border-bottom: 1px #DEDEDE solid;
+}
+
+.system_message_cantainer .cantainer_item a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.system_message_cantainer .cantainer_item .item_title{
+	width: 100%;
+	overflow: hidden;
+}
+
+.system_message_cantainer .cantainer_item .item_title .title_main{
+	font-size: 28px;
+	float: left;
+}
+
+.system_message_cantainer .cantainer_item .item_title .title_date{
+	font-size: 24px;
+	float: right;
+	color: #666;
+}
+
+.system_message_cantainer .cantainer_item .item_infor{
+	font-size: 24px;
+	color: #666;
+}
+
+/*
+	write_personalinfor.html
+*/
+
+.write_personalinfor_cantainer .list-block .item-content{
+	padding: 0;
+}
+
+.write_personalinfor_cantainer .item-photo{
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: #F7F7F7;
+	right: 20px;
+}
+
+.write_personalinfor_cantainer .list-block .item-title.label{
+	padding: 20px 0 20px 20px;
+}
+
+
+/*
+	edit_personalinfor.html
+*/
+
+.edit_personalinfor_cantainer .list-block .item-content{
+	padding: 0;
+}
+
+.edit_personalinfor_cantainer .item-photo{
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: #F7F7F7;
+	right: 20px;
+}
+
+.edit_personalinfor_cantainer .list-block .item-title.label{
+	padding: 20px 0 20px 20px;
+}
+
+/*
+	carpooling.html
+
+*/
+
+.carpooling_cantainer .list-block ul:before,
+.carpooling_cantainer .list-block ul:after{
+	height: 1px;
+}
+
+.carpooling_cantainer .list-block .item-content{
+	padding: 0 20px;
+}
+
+.carpooling_cantainer .list-block .item-title.label{
+	width: 10%;
+}
+
+.carpooling_cantainer .people_number{
+	padding: 20px;
+	overflow: hidden;
+}
+
+.carpooling_cantainer .people_number .content-block{
+	padding: 0;
+	margin: 0;
+}
+
+.carpooling_cantainer .people_number .button{
+	width: 24%;
+	height: 75px;
+	border-radius: 10px;
+	-webkit-box-shadow:0 0 1px rgba(0, 0, 0, .5);
+  -moz-box-shadow:0 0 1px rgba(0, 0, 0, .5);
+  box-shadow:0 0 1px rgba(0, 0, 0, .5);
+  background-color: #FFF;
+  border: 0px;
+  color: #000;
+  float: left;
+  margin-right: 12px;
+  padding: 5px 0 0 0;
+}
+
+.carpooling_cantainer .people_number .button.active{
+	background-color: #FF9A02;
+	color: #FFF;
+}
+
+.carpooling_cantainer .people_number .button:last-child{
+	margin-right: 0px;
+}
+
+.carpooling_cantainer .people_number .button span{
+	display: block;
+}
+
+.carpooling_cantainer .people_number .button .btn_size_1{
+	font-size: 28px;
+}
+
+.carpooling_cantainer .people_number .button .btn_size_2{
+	font-size: 24px;
+}
+
+.carpooling_cantainer .form_submit{
+	margin-top: 50px;
+}
+
+.carpooling_cantainer .form_submit .button{
+	width: 520px;
+	height: 80px;
+	line-height: 80px;
+	padding: 0;
+	margin: 0 auto;
+	float: none;
+  background-color: #CCC;
+  color: #FFF;
+}
+
+.carpooling_cantainer .form_submit .button.active{
+	background-color: #FF9A02;
+	color: #FFF;
+}
+
+.carpooling_cantainer .item-inner .width_1{
+	width: 120%;
+}
+
+.carpooling_cantainer .item-inner .width_1 input{
+	text-align: right;
+	padding: 0 20px 0 0;
+	color: #FF0000;
+}
+
+.carpooling_cantainer .item-inner .width_2{
+	width: 5%;
+}
+
+.carpooling_cantainer .item-inner .width_2 input{
+	text-align: center;
+	padding: 0 15px;
+}
+
+.start_time_header{
+	height: 90px;
+}
+
+.start_time_header .button{
+	width: 120px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #FF9A02;
+  color: #FFF;
+  margin: 20px 0;
+}
+
+.start_time_header .title{
+  text-align: left;
+  padding: 0 0 0 20px;
+  font-size: 30px;
+  color: #666;
+  height: 100%;
+  line-height: 90px;
+}

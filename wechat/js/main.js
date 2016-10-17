@@ -1,35 +1,56 @@
 
-
+var key = "g0jmgfENiiETRN96vrGvyrZaIZGkEgg8";
 $(document).ready(function() {
-	$.extend($.validator.messages, {
-    required: "必选字段",
-    remote: "请修正该字段",
-    email: "请输入正确格式的电子邮件",
-    url: "请输入合法的网址",
-    date: "请输入合法的日期",
-    dateISO: "请输入合法的日期 (ISO).",
-    number: "请输入合法的数字",
-    digits: "只能输入整数",
-    creditcard: "请输入合法的信用卡号",
-    equalTo: "请再次输入相同的值",
-    accept: "请输入拥有合法后缀名的字符串",
-    maxlength: $.validator.format("请输入一个长度最多是 {0} 的字符串"),
-    minlength: $.validator.format("请输入一个长度最少是 {0} 的字符串"),
-    rangelength: $.validator.format("请输入一个长度介于 {0} 和 {1} 之间的字符串"),
-    range: $.validator.format("请输入一个介于 {0} 和 {1} 之间的值"),
-    max: $.validator.format("请输入一个最大为 {0} 的值"),
-    min: $.validator.format("请输入一个最小为 {0} 的值")
-	});
+  $.init();
+
+  $("#start_time").picker({
+  	toolbarTemplate: '<header class="bar bar-nav start_time_header">\
+		  <button class="button button-link pull-right close-picker">确定</button>\
+		  <h1 class="title">请提前一小时预约</h1>\
+		  </header>',
+		cols: [
+	    {
+	      textAlign: 'center',
+	      values: ['今天', '明天', '后天']
+	      //如果你希望显示文案和实际值不同，可以在这里加一个displayValues: [.....]
+	    },
+	    {
+	      textAlign: 'center',
+	      values: ['1时', '2时', '3时', '4时', '5时', '6时', '7时', '8时', '9时', '10时', '11时', '12时', '13时', '14时', '15时', '16时', '17时', '18时', '19时', '20时', '21时', '22时', '23时', '24时']
+	    },
+	    {
+	      textAlign: 'center',
+	      values: ['1分', '2分', '3分', '4分', '5分', '6分', '7分', '8分', '9分', '10分', '11分', '12分', '13分', '14分', '15分', '16分', '17分', '18分', '19分', '20分', '21分', '22分', '23分', '24分',
+	      				'25分', '26分', '27分', '28分', '29分', '30分', '31分', '32分', '33分', '34分', '35分', '36分', '37分', '38分', '39分', '40分', '41分', '42分', '43分', '44分', '45分', '46分', '47分', '48分',
+	      				'49分', '50分', '51分', '52分', '53分', '54分', '55分', '56分', '57分', '58分', '59分', '60分']
+	    }
+	  ]
+  });
+
+  $(".people_number .button").click(function(event) {
+  	$(".people_number .button").removeClass("active");
+  	$(this).addClass("active");
+
+  	$("#single_money").val($(this).attr("data-money"));
+  	$("#people_number").val($(this).attr("data-people"));
+  });
+
 });
 
-this.getLocation = function(){
-  if (navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(showPosition);
-  }else{x.innerHTML="Geolocation is not supported by this browser.";}
+this.add_number = function(elem , elem_display){
+	$(elem).val(parseInt($(elem).val()) + 1);
+
+	if (elem_display != "") {
+		$(elem_display).val("￥" + parseInt($("#single_money").val()) * (parseInt($(elem).val()) + 1) );
+	}
 }
-this.showPosition = function(position){
-  x.innerHTML="Latitude: " + position.coords.latitude +
-  "<br />Longitude: " + position.coords.longitude;
+
+this.minu_number = function(elem , elem_display){
+	$(elem).val(parseInt($(elem).val()) - 1);
+
+	if (elem_display != "") {
+		$(elem_display).val("￥" + parseInt($("#single_money").val()) * (parseInt($(elem).val()) - 1) );	
+	}
 }
 
 /*
@@ -96,54 +117,6 @@ this.index_load = function(data){
 	}
 
 }
-
-/*
-	表单提交ajax调用
-*/
-this.login_form_submit = function(){
-  $("#login_form").validate({
-    doNotHideMessage: true,
-    errorClass: "error",
-    errorElement: "label",
-    rules: {
-      user_name:{
-        required:true
-      },
-      password:{
-        required:true
-      }
-    },
-    messages: {
-
-    }
-  });
-  
-  if($('#login_form').valid()){
-    
-    $('#login_form').ajaxSubmit({
-      dataType: "json",
-      type: "POST",
-      beforeSubmit: function(){
-        $.mobile.loading( "show" );
-			},
-      success: function (data) {
-        //$(".body_overlay").hide(500);
-        if (data.result == false) {
-          layer.msg(data.message);
-        } else {
-          layer.msg(data.message);
-          location.href = action_base_dir + "/admin/adminList";
-        }
-      },
-      error: function (XMLHttpRequest, textStatus, errorThrown) {
-        alert("errorThrown:" + errorThrown);
-      },
-      complete: function(){
-				$.mobile.loading("hide");
-			}
-    });
-  }
-};
 
 function StringBuffer() {
   this.__strings__ = new Array();
