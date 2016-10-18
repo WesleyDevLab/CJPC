@@ -33,6 +33,12 @@ $(document).ready(function() {
 
   	$("#single_money").val($(this).attr("data-money"));
   	$("#people_number").val($(this).attr("data-people"));
+  	$("#total_money").val(parseInt($(this).attr("data-money")) * parseInt($(this).attr("data-people")))
+  });
+
+  $(document).on('click','.pay_confirm_cantainer .cancel_order a', function () {
+    $.confirm('订单取消后将不能恢复<br>请确认', function () {
+    });
   });
 
 });
@@ -41,7 +47,7 @@ this.add_number = function(elem , elem_display){
 	$(elem).val(parseInt($(elem).val()) + 1);
 
 	if (elem_display != "") {
-		$(elem_display).val("￥" + parseInt($("#single_money").val()) * (parseInt($(elem).val()) + 1) );
+		$(elem_display).val("￥" + parseInt($("#single_money").val()) * (parseInt($(elem).val())) );
 	}
 }
 
@@ -49,7 +55,7 @@ this.minu_number = function(elem , elem_display){
 	$(elem).val(parseInt($(elem).val()) - 1);
 
 	if (elem_display != "") {
-		$(elem_display).val("￥" + parseInt($("#single_money").val()) * (parseInt($(elem).val()) - 1) );	
+		$(elem_display).val("￥" + parseInt($("#single_money").val()) * (parseInt($(elem).val())) );	
 	}
 }
 
