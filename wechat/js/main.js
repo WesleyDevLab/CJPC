@@ -41,6 +41,21 @@ $(document).ready(function() {
     });
   });
 
+  $(document).on('click','.send_order_cantainer .cancel_order a', function () {
+    $.confirm('订单取消后将不能恢复<br>请确认', function () {
+    });
+  });
+
+  $(document).on('click','.order_detail_cantainer .cancel_order a', function () {
+    $.confirm('订单取消后将不能恢复<br>请确认', function () {
+    });
+  });
+
+  $(document).on('click','.my_order_cantainer .cancel_order a', function () {
+    $.confirm('订单取消后资金会在1-7个工作日内返还至<br>您的账户，是否要取消订单？', function () {
+    });
+  });
+
 });
 
 this.add_number = function(elem , elem_display){

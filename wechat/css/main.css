@@ -198,6 +198,7 @@ img {
 	color: #CCC;
 	margin: 60px auto 0;
 	cursor: pointer;
+	border-radius: 0px;
 }
 
 .form_submit a.undisable,
@@ -770,7 +771,7 @@ img {
 	border-bottom: 1px #ccc solid;
 	font-size: 24px;
 	padding: 22px 20px;
-	width: 95%;
+	width: 90%;
 }
 
 .pay_confirm_cantainer .pay_method .pay_method_row div.row_rad{
@@ -846,4 +847,375 @@ img {
 .pay_success_cantainer .form_submit a{
 	margin: 30px auto 0;
 }
+
+/*
+	personal_center.html
+*/
+
+.personal_center_cantainer{
+
+}
+
+.personal_center_cantainer .personal_center_header{
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	background-color: #FFF;
+}
+
+.personal_center_cantainer .personal_center_header .photo{
+	width: 114px;
+	height: 114px;
+	border-radius: 50%;
+	float: left;
+	margin: 0 20px 0 40px;
+}
+
+.personal_center_cantainer .personal_center_header .infor{
+	float: left;
+	padding: 13px 0;
+}
+
+.personal_center_cantainer .personal_center_header .infor .infor_name{
+	font-size: 30px;
+}
+
+.personal_center_cantainer .personal_center_header .infor .infor_tel{
+	font-size: 28px;
+	color: #666;
+}
+
+.personal_center_cantainer .personal_center_header .back{
+	float: right;
+	margin: 40px 30px 0 0;
+}
+
+.personal_center_cantainer .list-block{
+	margin: 20px 0 0 0;
+}
+
+.personal_center_cantainer .list-block .item-link.list-button{
+	padding: 0 0 0 20px;
+	color: #333;
+	text-align: left;
+	line-height: normal;
+	overflow: hidden;
+	height: 68px;
+}
+
+.personal_center_cantainer .list-block .item-link.list-button .icon{
+	width: 25px;
+	height: 28px;
+	float: left;
+	margin: 20px 20px 0 0;
+}
+
+.personal_center_cantainer .list-block .item-link.list-button .text{
+	float: left;
+	font-size: 30px;
+	height: 100%;
+	line-height: 68px;
+}
+
+.personal_center_cantainer .logout a{
+	width: 500px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 34px;
+	margin: 50px auto 0;
+}
+
+/*
+	my_order.html
+*/
+
+.my_order_cantainer{
+	padding: 10px 0 0;
+}
+
+.my_order_cantainer .order_item{
+	background-color: #FFF;
+	margin: 0 0 20px 0;
+}
+
+.my_order_cantainer .order_item .order_item_title{
+	height: 50px;
+	line-height: 50px;
+	padding: 0 0 0 20px;
+	font-size: 30px;
+}
+
+.my_order_cantainer .order_item .order_item_content{
+	border-top: 1px #CCC solid;
+	border-bottom: 1px #CCC solid;
+	padding: 0 0 20px 20px;
+}
+
+.my_order_cantainer .order_item .order_item_content .address{
+	overflow: hidden;
+	padding: 20px 0 8px;
+}
+
+.my_order_cantainer .order_item .order_item_content .address div{
+	display: inline-block;
+	font-size: 30px;
+	color: #333;
+}
+
+.my_order_cantainer .order_item .order_item_content .date{
+	font-size: 28px;
+	color: #666;
+}
+
+.my_order_cantainer .order_item .order_item_content .people,
+.my_order_cantainer .order_item .order_item_content .money{
+	font-size: 24px;
+	color: #666;
+}
+
+.my_order_cantainer .order_item .order_item_content .money .color_red{
+	color: #FF3333;
+}
+
+.my_order_cantainer .order_item_btn{
+	overflow: hidden;
+}
+
+.my_order_cantainer .order_item_btn a{
+	display: block;
+	width: 50%;
+	height: 68px;
+	float: left;
+	text-align: center;
+	line-height: 68px;
+	font-size: 28px;
+	color: #999;
+  border: 0px;
+  border-radius: 0;
+}
+
+.my_order_cantainer .order_item_btn a.cancel_order{
+	border-right: 1px #CCC solid;
+}
+
+/*
+	order_detail.html
+*/
+.order_detail_cantainer .pay_content{
+	background-color: #FFF;
+	padding: 0 0 20px;
+}
+
+.order_detail_cantainer .pay_content .pay_content_address{
+	padding: 30px;
+	text-align: center;
+	font-size: 34px;
+}
+
+.order_detail_cantainer .pay_content .pay_content_address div{
+	display: inline-block;
+}
+
+.order_detail_cantainer .pay_content .pay_content_date{
+	padding: 0 50px;
+	font-size: 28px;
+	color: #666;
+	overflow: hidden;
+}
+
+.order_detail_cantainer .pay_content .pay_content_date .date{
+	float: left;
+}
+
+.order_detail_cantainer .pay_content .pay_content_date .time{
+	float: right;
+}
+
+.order_detail_cantainer .pay_content .pay_content_take_postion{
+	padding: 0 50px;
+	overflow: hidden;
+}
+
+.order_detail_cantainer .pay_content .pay_content_take_postion div{
+	float: left;
+	font-size: 24px;
+	color: #666;
+}
+
+.order_detail_cantainer .pay_content .pay_content_take_postion div.take_position_icon{
+	padding: 11px 5px 11px 0px;
+}
+
+.order_detail_cantainer .pay_content .pay_content_get_postion{
+	padding: 0 50px;
+	overflow: hidden;
+}
+
+.order_detail_cantainer .pay_content .pay_content_get_postion div{
+	float: left;
+	font-size: 24px;
+	color: #666;
+}
+
+.order_detail_cantainer .pay_content .pay_content_get_postion div.get_position_icon{
+	padding: 11px 5px 11px 0px;
+}
+
+.order_detail_cantainer .pay_content .clear_line{
+	margin: 20px;
+	border-bottom: 1px #CCC solid;
+}
+
+.order_detail_cantainer .pay_content .pay_content_method,
+.order_detail_cantainer .pay_content .pay_content_people,
+.order_detail_cantainer .pay_content .pay_content_money{
+	font-size: 24px;
+	color: #666;
+	padding: 0 50px;
+}
+
+.order_detail_cantainer .pay_content .pay_content_money .color_red{
+	color: #FF0000;
+}
+
+.order_detail_cantainer .order_detail_action{
+	height: 100px;
+	line-height: 100px;
+	font-size: 24px;
+	text-align: center;
+	background-color: #FFF;
+	margin: 20px auto;
+}
+
+.order_detail_cantainer .form_submit a{
+	width: auto;
+	margin: 0 70px 30px;
+}
+
+/*
+	send_order.html
+*/
+
+.send_order_cantainer .pay_content{
+	background-color: #FFF;
+	padding: 0 0 20px;
+}
+
+.send_order_cantainer .pay_content .pay_content_address{
+	padding: 30px;
+	text-align: center;
+	font-size: 34px;
+}
+
+.send_order_cantainer .pay_content .pay_content_address div{
+	display: inline-block;
+}
+
+.send_order_cantainer .pay_content .pay_content_date{
+	padding: 0 50px;
+	font-size: 28px;
+	color: #666;
+	overflow: hidden;
+}
+
+.send_order_cantainer .pay_content .pay_content_date .date{
+	float: left;
+}
+
+.send_order_cantainer .pay_content .pay_content_date .time{
+	float: right;
+}
+
+.send_order_cantainer .pay_content .pay_content_take_postion{
+	padding: 0 50px;
+	overflow: hidden;
+}
+
+.send_order_cantainer .pay_content .pay_content_take_postion div{
+	float: left;
+	font-size: 24px;
+	color: #666;
+}
+
+.send_order_cantainer .pay_content .pay_content_take_postion div.take_position_icon{
+	padding: 11px 5px 11px 0px;
+}
+
+.send_order_cantainer .pay_content .pay_content_get_postion{
+	padding: 0 50px;
+	overflow: hidden;
+}
+
+.send_order_cantainer .pay_content .pay_content_get_postion div{
+	float: left;
+	font-size: 24px;
+	color: #666;
+}
+
+.send_order_cantainer .pay_content .pay_content_get_postion div.get_position_icon{
+	padding: 11px 5px 11px 0px;
+}
+
+.send_order_cantainer .pay_content .clear_line{
+	margin: 20px;
+	border-bottom: 1px #CCC solid;
+}
+
+.send_order_cantainer .pay_content .pay_content_method,
+.send_order_cantainer .pay_content .pay_content_people,
+.send_order_cantainer .pay_content .pay_content_money{
+	font-size: 24px;
+	color: #666;
+	padding: 0 50px;
+}
+
+.send_order_cantainer .pay_content .pay_content_money .color_red{
+	color: #FF0000;
+}
+
+.send_order_cantainer .send_order_infor{
+	margin: 20px auto;
+	padding: 20px 50px;
+	font-size: 24px;
+	background-color: #FFF
+}
+
+.send_order_cantainer .send_order_infor .infor_name{
+}
+
+.send_order_cantainer .form_submit a{
+	width: auto;
+	margin: 0 70px 30px;
+}
+
+/*
+	system_message_detail.html
+*/
+
+.system_message_detail_cantainer{
+	background-color: #FFF;
+	padding: 15px 20px;
+}
+
+.system_message_detail_cantainer .detail_title{
+	font-size: 30px;
+}
+
+.system_message_detail_cantainer .detail_date{
+	font-size: 24px;
+	color: #999;
+}
+
+.system_message_detail_cantainer .detail_content{
+	font-size: 24px;
+	padding: 0 0 15px
+}
+
+.system_message_detail_cantainer .detail_sub_content{
+	font-size: 24px;
+}
+
+
+
+
 
