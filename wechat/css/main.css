@@ -388,8 +388,13 @@ img {
 	margin: 0px auto 167px;
 }
 
+.login_cantainer .form_submit a{
+	border-radius: 80px;
+}
+
 .login_cantainer .releate_link{
 	width: 400px;
+	overflow: hidden;
 	margin: 30px auto 0;
 }
 

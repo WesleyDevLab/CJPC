@@ -19,7 +19,7 @@
 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link id="base-style" href="css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<link id="base-style-customer" href="css/customer.css" rel="stylesheet">
 	<!-- end: CSS -->
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -117,6 +117,196 @@
 					</li>
 					<li><a href="#">订单管理</a></li>
 				</ul>
+
+				<div class="row-fluid">
+					<form class="form-search">
+						<div class="control-group">
+							<div class="controls">
+								<select>
+									<option value="">出发地</option>
+									<option value="0">长沙</option>
+									<option value="1">湘潭</option>
+								</select>
+								<select>
+									<option value="">目的地</option>
+									<option value="0">长沙</option>
+									<option value="1">湘潭</option>
+								</select>
+								<select>
+									<option value="">拼单类型</option>
+									<option value="0">包车</option>
+									<option value="1">2人拼车</option>
+									<option value="2">3人拼车</option>
+									<option value="3">4人拼车</option>
+								</select>
+								<input type="text" class="datepicker">
+								<select class="span1">
+									<option value="00">00时</option>
+									<option value="01">01时</option>
+									<option value="02">02时</option>
+									<option value="03">03时</option>
+									<option value="04">04时</option>
+									<option value="05">05时</option>
+									<option value="06">06时</option>
+									<option value="07">07时</option>
+									<option value="08">08时</option>
+									<option value="09">09时</option>
+									<option value="10">10时</option>
+									<option value="11">11时</option>
+									<option value="12">12时</option>
+									<option value="13">13时</option>
+									<option value="14">14时</option>
+									<option value="15">15时</option>
+									<option value="16">16时</option>
+									<option value="17">17时</option>
+									<option value="18">18时</option>
+									<option value="19">19时</option>
+									<option value="20">20时</option>
+									<option value="21">21时</option>
+									<option value="22">22时</option>
+									<option value="23">23时</option>
+								</select>
+								<select class="span1">
+									<option value="00">00分</option>
+									<option value="01">01分</option>
+									<option value="02">02分</option>
+									<option value="03">03分</option>
+									<option value="04">04分</option>
+									<option value="05">05分</option>
+									<option value="06">06分</option>
+									<option value="07">07分</option>
+									<option value="08">08分</option>
+									<option value="09">09分</option>
+									<option value="10">10分</option>
+									<option value="11">11分</option>
+									<option value="12">12分</option>
+									<option value="13">13分</option>
+									<option value="14">14分</option>
+									<option value="15">15分</option>
+									<option value="16">16分</option>
+									<option value="17">17分</option>
+									<option value="18">18分</option>
+									<option value="19">19分</option>
+									<option value="20">20分</option>
+									<option value="21">21分</option>
+									<option value="22">22分</option>
+									<option value="23">23分</option>
+									<option value="24">24分</option>
+									<option value="25">25分</option>
+									<option value="26">26分</option>
+									<option value="27">27分</option>
+									<option value="28">28分</option>
+									<option value="29">29分</option>
+									<option value="30">30分</option>
+									<option value="31">31分</option>
+									<option value="32">32分</option>
+									<option value="33">33分</option>
+									<option value="34">34分</option>
+									<option value="35">35分</option>
+									<option value="36">36分</option>
+									<option value="37">37分</option>
+									<option value="38">38分</option>
+									<option value="39">39分</option>
+									<option value="40">40分</option>
+									<option value="41">41分</option>
+									<option value="42">42分</option>
+									<option value="43">43分</option>
+									<option value="44">44分</option>
+									<option value="45">45分</option>
+									<option value="46">46分</option>
+									<option value="47">47分</option>
+									<option value="48">48分</option>
+									<option value="49">49分</option>
+									<option value="50">50分</option>
+									<option value="51">51分</option>
+									<option value="52">52分</option>
+									<option value="53">53分</option>
+									<option value="54">54分</option>
+									<option value="55">55分</option>
+									<option value="56">56分</option>
+									<option value="57">57分</option>
+									<option value="58">58分</option>
+									<option value="59">59分</option>
+								</select>
+							  <input type="text" placeholder="请输入拼单用户或司机检索">
+								<button class="btn btn-primary btn-round">检索</button>
+							</div>
+					  </div>
+					</form>
+				</div>
+
+				<div class="row-fluid">
+					<div class="span12">
+						<table class="table table-bordered">
+						  <thead>
+							  <tr>
+								  <th>出发地</th>
+								  <th>目的地</th>
+								  <th>拼车类型</th>
+								  <th>拼单用户</th>
+								  <th>出行时间</th>
+								  <th>订单状态</th>
+								  <th>接单司机</th>
+								  <th>司机联系方式</th>
+								  <th>操作</th>
+							  </tr>
+						  </thead>   
+						  <tbody>
+								<tr>
+									<td class="center">长沙</td>
+									<td class="center">湘潭</td>
+									<td class="center">包车</td>
+									<td class="center">李世峰(13900987765)</td>
+									<td class="center">XXXX-XX-XX  XX:XX</td>
+									<td class="center">未完成</td>
+									<td class="center">XXX</td>
+									<td class="center">XXXXXXXXXXX</td>
+									<td class="center">
+										<a class="btn btn-success" href="#">
+											<i class="halflings-icon white zoom-in"></i>  
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="center">长沙</td>
+									<td class="center">湘潭</td>
+									<td class="center">包车</td>
+									<td class="center">李世峰(13900987765)</td>
+									<td class="center">XXXX-XX-XX  XX:XX</td>
+									<td class="center">已完成</td>
+									<td class="center">XXX</td>
+									<td class="center">XXXXXXXXXXX</td>
+									<td class="center">
+										<a class="btn btn-success" href="#">
+											<i class="halflings-icon white zoom-in"></i>  
+										</a>
+									</td>
+								</tr>
+						  </tbody>
+					 </table>  
+					 <div class="pagination pagination-centered">
+						  <ul>
+								<li>
+									<a href="#">Prev</a>
+								</li>
+								<li class="active">
+								  <a href="#">1</a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">3</a>
+								</li>
+								<li>
+									<a href="#">4</a>
+								</li>
+								<li>
+									<a href="#">Next</a>
+								</li>
+						  </ul>
+					</div>  
+				</div>
 			</div>
 		</div>
 	</div>
@@ -181,6 +371,13 @@
 	<script src="js/counter.js"></script>
 
 	<script src="js/retina.js"></script>
+
+	<script src="js/layer/layer.js"></script>
+
+	<script src="js/jquery.validate/jquery.validate.min.js"></script>
+	<script src="js/jquery.validate/additional-methods.min.js"></script>
+
+	<script src="js/jquery.form.min.js"></script>
 
 	<script src="js/custom.js"></script>
 	<!-- end: JavaScript-->

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>城际拼车</title>
+	<link rel="stylesheet" type="text/css" href="../js/jquery.mobile/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="../js/jquery.validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../js/jquery.validate/additional-methods.min.js"></script>
+<script type="text/javascript" src="../js/jquery.form.min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".form_submit").on("click",function(){
+			$.ajax({
+				type : "post",
+				url : "/CJPC/userOrder/createOrder.do",
+				data : $('#create_order_form').serialize(),
+				dataType : "json",
+				success : function(data) {
+					alert(data);
+					if (data == 1) {
+						alert("保存成功");
+					}else{
+						alert("保存失败");
+					}
+				}
+			});
+		});
+	});
+</script>
+<body>
+	<div data-role="page" class="">
+		<div data-role="header" class="header_style_one">
+	      <div class="header_title">派单管理 - 未派单</div>
+      	</div>
+      	<div data-role="main" class="resgiter_cantainer">
+      		<div class="form_style">
+      		<form method="post" action="" id="create_order_form">
+      			<div class="form_input width_90">
+		        	<input type="text" name="origin" id="origin" value="" placeholder="出发地">
+		        </div>
+          		<div class="form_input width_90">
+		            <input type="text" name="destination" id="destination" value="" placeholder="目的地">
+		        </div>
+          		<div class="form_input width_90">
+		            <input type="text" name="orderType" id="orderType" value="" placeholder="拼单类型">
+		        </div>
+          		<div class="form_input width_90">
+		           <input type="text" name="orderUser" id="orderUser" value="" placeholder="拼单用户">
+		        </div>
+		        <div class="form_input width_90">
+		           <input type="number" name="orderNum" id="orderNum" value="" placeholder="订单人数">
+		        </div>
+		        <div class="form_input width_90">
+		           <input type="number" name="orderAmt" id="orderAmt" value="" placeholder="订单金额">
+		        </div>
+		        <div class="form_input width_90">
+		           <input type="datetime" name="travelTime" id="travelTime" value="" placeholder="出行时间">
+		        </div>
+		        <div class="form_input width_90">
+		           <input type="text" name="orderUser" id="orderUser" value="" placeholder="订单状态">
+		        </div>
+		        <div class="form_submit">
+           			<a class="">保存</a>
+          		</div>
+		    </form>
+      		</div>
+      	</div>
+	</div>
+</body>
+</html>

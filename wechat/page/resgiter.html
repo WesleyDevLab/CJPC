@@ -29,7 +29,7 @@
                       <img src="../images/common/telephone.png">
                     </div>
                     <div class="item-input">
-                      <input type="text" placeholder="请输入手机号">
+                      <input type="text" name ="userphone" placeholder="请输入手机号">
                     </div>
                   </div>
                 </div>
@@ -42,7 +42,7 @@
                       <img src="../images/common/password.png">
                     </div>
                     <div class="item-input">
-                      <input type="text" placeholder="请输入验证码">
+                      <input type="text" name ="mobileCode" placeholder="请输入验证码">
                     </div>
 
                     <div class="item-icon">
@@ -59,7 +59,7 @@
                       <img src="../images/common/password.png">
                     </div>
                     <div class="item-input">
-                      <input type="text" placeholder="请输入密码">
+                      <input type="text" name ="userpwd" placeholder="请输入密码">
                     </div>
                   </div>
                 </div>
@@ -121,7 +121,7 @@
           $.ajax({
             type : "post",
             url : "/CJPC/index/getAppMobileCode.do",
-            data : $('#resgiter_form').serialize(),
+            data : $('#item-input').serialize(),
             dataType : "json",
             success : function(data) {
               console.log(data);

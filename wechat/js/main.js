@@ -56,6 +56,11 @@ $(document).ready(function() {
     });
   });
 
+  $(".pay_confirm_cantainer .pay_method .pay_method_row").click(function(event) {
+  	$(".pay_confirm_cantainer .pay_method .pay_method_row").removeClass("active");
+  	$(this).addClass("active");
+  });
+
 });
 
 this.add_number = function(elem , elem_display){
@@ -86,16 +91,14 @@ this.ajax_load = function(url,method,params,method_name){
 		dataType: 'json',
 		data: params,
 		beforeSend:function(){
-			$.mobile.loadingMessageTextVisible = true;  
-    	$.mobile.loadingMessageTheme = 'a';  
-      $.mobile.showPageLoadingMsg(); 
+			$.showPreloader();
 		},
 		success:function(data){
 			var function_name = eval(method_name);
 			new function_name(data);
 		},
 		complete: function(){
-			$.mobile.loading("hide");
+			$.hidePreloader();
 		}
 	});
 	
@@ -137,6 +140,28 @@ this.index_load = function(data){
 
 	}
 
+}
+
+this.ajax_form_submit = function(url,form_id,method_name=""){
+	$.ajax({
+		url: url,
+		type: method,
+		dataType: 'json',
+		data: getFormParam($(form_id)),
+		beforeSend:function(){
+			$.showPreloader();
+		},
+		success:function(data){
+			if (data.resultObject.error) {
+        alert(data.resultObject.error);
+        return;
+      }
+      window.location.href = data.resultObject.url;
+		},
+		complete: function(){
+			$.hidePreloader();
+		}
+	});
 }
 
 function StringBuffer() {

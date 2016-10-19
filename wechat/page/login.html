@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
+  <title>城际拼车</title>
+  <meta name="viewport" content="width=980, initial-scale=1.0">
   <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
   <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/??sm.min.css,sm-extend.min.css">
   <link rel="stylesheet" type="text/css" href="../css/main.css" />
 </head>
 <body>
   <div class="page-group">
-    <div class="page">
+    <div class="page" style="background: #FFF;">
       <div class="content">
         <div class="login_cantainer">
           <div class="login_logo">
@@ -26,7 +27,7 @@
                       <img src="../images/common/telephone.png">
                     </div>
                     <div class="item-input">
-                      <input type="text" placeholder="请输入手机号">
+                      <input type="text" name ="userphone" placeholder="请输入手机号">
                     </div>
                   </div>
                 </div>
@@ -39,7 +40,7 @@
                       <img src="../images/common/password.png">
                     </div>
                     <div class="item-input">
-                      <input type="text" placeholder="请输入密码">
+                      <input type="password" name ="userpwd"  placeholder="请输入密码">
                     </div>
                   </div>
                 </div>
@@ -53,8 +54,8 @@
             <a href="#" class="button button-light">登陆</a>
           </div>
           <div class="releate_link">
-            <a href="#" class="forget_password">忘记密码</a>
-            <a href="#" class="resgiter">注册账号</a>
+            <a href="forget_password.html" class="forget_password">忘记密码</a>
+            <a href="resgiter.html" class="resgiter">注册账号</a>
           </div>
         </div>
       </div>
@@ -71,7 +72,7 @@
         $.ajax({
           type : "post",
           url : "/CJPC/index/login.do",
-          data : $('#login_form').serialize(),
+          data : getFormParam($('#list-block')),
           dataType : "json",
           success : function(data) {
             if (data.resultObject.error) {
